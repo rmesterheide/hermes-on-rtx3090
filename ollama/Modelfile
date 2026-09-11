@@ -1,0 +1,6 @@
+# Hermes needs a large context window for agentic work (tool definitions + skills
+# alone are ~8k tokens). Ollama's default is 2048, which is far too small.
+# 64k fits on a 24 GB card with qwen3.6:27b, but leaves only ~2 GB headroom.
+# Use 32768 if you want to run anything else on the GPU at the same time.
+FROM qwen3.6:27b
+PARAMETER num_ctx 65536
