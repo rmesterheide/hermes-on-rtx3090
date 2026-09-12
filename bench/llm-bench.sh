@@ -3,6 +3,7 @@
 # Produces bench/results/<hostname>-<gpu>-<date>.md so two machines can be compared line by line.
 # Usage: bench/llm-bench.sh [model ...]      (default: qwen3.6-27b-64k qwen3.6:35b gemma4:31b)
 set -euo pipefail
+export LC_ALL=C   # lscpu/free output is parsed, keep it English
 
 OLLAMA=${OLLAMA_HOST:-http://localhost:11434}
 MODELS=("$@"); [ ${#MODELS[@]} -eq 0 ] && MODELS=(qwen3.6-27b-64k qwen3.6:35b gemma4:31b)

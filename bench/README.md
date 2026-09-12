@@ -33,5 +33,5 @@ Time from Enter to the last character of the answer. This is the number that sho
 
 | Machine | File |
 |---|---|
-| RTX 3090 | `results/` (pending) |
+| RTX 3090 | [`results/ubnt2080rm-RTX-3090-2026-09-12.md`](results/ubnt2080rm-RTX-3090-2026-09-12.md) |
 | RTX 4090 | `results/` (pending) |
