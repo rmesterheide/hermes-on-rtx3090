@@ -17,7 +17,11 @@ The RTX 4090 column will be filled in once the second machine is migrated to Ubu
 | Home Assistant skill (curl + jq, 192 tokens back) | tool call 13.7 s incl. model reasoning; full answer well under a minute | _tbd_ |
 | Session that had to *search* for a smart-home system (no skill/token) | 82.7 s of `find`/`systemctl` before giving up | n/a |
 
-## How to reproduce a number
+## Reproducible run
+
+See [`bench/README.md`](../bench/README.md) and `bench/llm-bench.sh`.
+
+## Quick check
 
 ```bash
 # tokens/s for pure generation, no agent overhead
