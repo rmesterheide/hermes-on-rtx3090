@@ -77,8 +77,10 @@ delivers (headless numbers above) 1.4–1.5× generation, 2.0× prompt eval, 2.2
 
 Per euro the 3090 still wins on both — the 4090 buys latency (time to first token halves), power
 efficiency and headroom, not throughput per euro. Two used 3090s cost less than one used 4090 and
-give 48 GB of VRAM; that is the comparison to make before buying a 4090 for local LLM work in 2026.
-Prices are snapshots and move; the sources are linked so the table can be redone.
+together hold 48 GB of VRAM (split across two cards): room for a 70B model in 4-bit that no single
+24 GB card fits. Caveats, not measured here: board and PSU for two 350 W cards, and a model split
+across two GPUs runs slower than on one. That is the comparison to make before buying a 4090 for
+local LLM work in 2026. Prices are snapshots and move; the sources are linked so the table can be redone.
 
 ## Agent turn, end to end
 
