@@ -56,6 +56,30 @@ partially into system RAM. The naive "4090 is 1.8× faster" from the first compa
 the 3090 being handicapped; the real hardware gap is 1.4× generation, 2.0× prompt eval. On a 24 GB card,
 **nothing else may share the GPU** — not even the login screen.
 
+## Price context (September 2026)
+
+What the two cards cost, to put the factors above on the other side of the scale.
+
+| | RTX 3090 (24 GB) | RTX 4090 (24 GB) |
+|---|---|---|
+| Launch price | 1,499 € (Sept 2020, UVP) | 1,949 € (Oct 2022, UVP) |
+| What I paid | not on file | 1,799 € (Gigabyte Aero OC, Mindfactory, Aug 2023) |
+| Used market, Sept 2026 | ~750–950 € (eBay sold-price data via [borncity](https://borncity.com/news/nvidia-rtx-3090-der-ungekroente-ki-koenig-des-gebrauchtmarkts/)); asking prices on Kleinanzeigen up to ~1,400 € | ~2,000–2,200 € ([ComputerBase forum](https://www.computerbase.de/forum/threads/rtx-4090-gebrauchtpreis.2230231/)) |
+| New, Sept 2026 | n/a | from ~3,390 € ([Geizhals](https://geizhals.de/nvidia-geforce-rtx-4090-founders-edition-a2815453.html)) — end of life, scarcity pricing |
+
+Taking ~850 € vs ~2,100 € as the used-market midpoints, a used 4090 costs ~2.5× a used 3090 and
+delivers (headless numbers above) 1.4–1.5× generation, 2.0× prompt eval, 2.2× tok/Wh:
+
+| Per 100 € of used-card price | RTX 3090 | RTX 4090 |
+|---|---|---|
+| Generation, qwen3.6:35b (tok/s) | 15.9 | 9.6 |
+| Prompt eval 16k, qwen3.6:35b (tok/s) | 405 | 328 |
+
+Per euro the 3090 still wins on both — the 4090 buys latency (time to first token halves), power
+efficiency and headroom, not throughput per euro. Two used 3090s cost less than one used 4090 and
+give 48 GB of VRAM; that is the comparison to make before buying a 4090 for local LLM work in 2026.
+Prices are snapshots and move; the sources are linked so the table can be redone.
+
 ## Agent turn, end to end
 
 Stopwatch from Enter to the end of the answer, fresh Hermes session, median of three (see [`bench/README.md`](../bench/README.md)).
